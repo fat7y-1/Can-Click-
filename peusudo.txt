@@ -1,0 +1,16 @@
+1. user need to click start to start game
+
+2. the user need only to click faster for cookies before end time
+
+3. the user need to avoid angry cookies
+
+4. when the user click the angry cookies the game is over
+
+* for coding *
+
+1. Create div can container it takes 3 div class to make row
+2. foreach div has 6 div for column and give each one id
+3. make if statement to if cookie not equal angry cookies the game will be continue , if it is equal the game is over
+4.if user click all right cookie it save in score and appear another cookies and the timer will decrease for next round
+
+
