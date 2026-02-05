@@ -1,2 +1,5 @@
-# Can-Click-
-this is game for project 1 in General  assembly 
+# Can Click
+
+## By: fathy soliman
+
+## Date: Februruay 5th, 2026
