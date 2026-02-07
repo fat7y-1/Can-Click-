@@ -1,3 +1,42 @@
 body {
-  background-color: aquamarine;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+}
+h1 {
+  color: white;
+}
+
+.all {
+  height: 900px;
+  width: 1500px;
+  text-align: center;
+  display: flex;
+  /* make it center */
+  justify-content: center;
+}
+.container {
+  height: 600px;
+  width: 1100px;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.box {
+  height: 150px;
+  width: 150px;
+  background-color: blue;
+  border: 10px solid black;
+}
+img {
+  height: 130px;
+  width: 130px;
+  text-align: center;
+  padding-top: 3px;
+}
+.angryCookies {
+  height: 140px;
+  width: 140px;
+  padding-top: 0;
 }

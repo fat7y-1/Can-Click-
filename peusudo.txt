@@ -1,16 +1,25 @@
 1. user need to click start to start game
 
-2. the user need only to click faster for cookies before end time
+2. the user needs to click on all normal cookies
 
-3. the user need to avoid angry cookies
+3. the user needs to avoid angry cookies
 
-4. when the user click the angry cookies the game is over
+3. the user needs to click on all normal cookies before the time ends to earn a personal best score
+
+4. when the user clicks the angry cookies the timer decreases by an x amount
+
+5. when the time ends the game is over and score is saved
+
+6. the user can click restart to start over
 
 * for coding *
 
 1. Create div can container it takes 3 div class to make row
-2. foreach div has 6 div for column and give each one id
-3. make if statement to if cookie not equal angry cookies the game will be continue , if it is equal the game is over
+2. foreach div has 5 div for column and give each one id
+3. make if statement to if cookie not equal angry cookies the game will be continue , if it is equal the time was decrease
 4.if user click all right cookie it save in score and appear another cookies and the timer will decrease for next round
+5. put button to start game
+6. give id for div to track the cookies
+7. use math.random to put cookies for random div class name box for normal cookies and angry cookies
 
 
