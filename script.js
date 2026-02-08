@@ -32,12 +32,6 @@ const scoreClick = document.querySelector("#scoring")
 function start() {
   refresh()
 
-  if (winner === true) {
-    userWin()
-    scoreClick.innerHTML = score
-    winner = false
-  }
-
   for (let i = 0; i < div_1.length; i++) {
     const random = boardRandom[Math.floor(boardRandom.length * Math.random())]
     // board[i] = random
@@ -63,14 +57,16 @@ function start() {
 function scoreCookie(event) {
   const selectCookie = event.currentTarget // currentTarget used for event listener where target used for child elemnt ex: img , p , h
   if (selectCookie.classList.contains("cookies")) {
-    score += 3
+    score += 30
     scoreClick.innerHTML = score
     selectCookie.innerHTML = ""
     selectCookie.classList.remove("cookies")
     if (score >= 100) {
-      userWin()
+      // userWin()
       winner = true
+
       scoreClick.textContent = "100"
+      window.location.href = "./win.html"
     }
   } else if (selectCookie.classList.contains("angryCookies")) {
     selectCookie.innerHTML = ""
@@ -104,16 +100,16 @@ function time() {
   }, 1000)
 }
 
-function userWin() {
-  alert("You win")
-  for (let i = 0; i < div_1.length; i++) {
-    div_1[i].innerHTML = ""
-    div_1[i].classList.remove("cookies")
-    div_1[i].classList.remove("angryCookies")
-  }
-  timer = 60
-  score = 0
-}
+// function userWin() {
+//   alert("You win")
+//   for (let i = 0; i < div_1.length; i++) {
+//     div_1[i].innerHTML = ""
+//     div_1[i].classList.remove("cookies")
+//     div_1[i].classList.remove("angryCookies")
+//   }
+//   timer = 60
+//   score = 0
+// }
 
 function refresh() {
   for (let i = 0; i < div_1.length; i++) {
