@@ -8,9 +8,10 @@ let timer = 60
 let timeStore = false
 let score = 0
 // let order = []
-let initTimeOut = false
+
 let renderC = 40
 let randomizer
+let timing
 
 const cookie = document.createElement("img")
 cookie.src = "./image/cookie.png"
@@ -55,7 +56,8 @@ function start() {
 
   stopRandomize()
   render()
-
+  // stopTime()
+  // time()
   // console.log(board)
 }
 function scoreCookie(event) {
@@ -84,13 +86,12 @@ function time() {
     const changeTime = document.querySelector("#times")
     if (timer <= 0) {
       changeTime.innerHTML = "Time is Up"
-      stopGame()
+      // stopGame()
       //return //Exit
-      if (
-        initTimeOut === true &&
-        init.addEventListener("click", init_C) === true
-      ) {
-        reset()
+      window.location.href = "./loss.html"
+
+      if (initTimeOut === true && init.addEventListener("click", init_C)) {
+        resetCookies()
       }
     } else {
       // start()
@@ -124,7 +125,6 @@ function refresh() {
 
 function init_C() {
   start()
-
   time()
 }
 
@@ -140,24 +140,9 @@ function render() {
     start()
   }, 3000)
 }
-function stopGame() {
-  for (let i = 0; i < div_1.length; i++) {
-    div_1[i].innerHTML = ""
-    div_1[i].classList.remove("cookies")
-    div_1[i].classList.remove("angryCookies")
-  }
-  boardRandom = []
-  initTimeOut = true
-  console.log(initTimeOut)
-}
-function reset() {
-  boardRandom = ["", cookie, angryCookie]
-  console.log(boardRandom)
-}
+
 // event Listener
-// if (initTimeOut === true) {
-//   boardRandom = ["", cookie, angryCookie]
-// }
+
 for (let i = 0; i < div_1.length; i++) {
   div_1[i].addEventListener("click", scoreCookie)
 }
