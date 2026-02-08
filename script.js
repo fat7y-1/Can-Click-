@@ -86,9 +86,9 @@ function time() {
     const changeTime = document.querySelector("#times")
     if (timer <= 0) {
       changeTime.innerHTML = "Time is Up"
-      // stopGame()
-      //return //Exit
-      window.location.href = "./loss.html"
+      setTimeout(() => {
+        window.location.href = "./loss.html"
+      }, 1000)
 
       if (initTimeOut === true && init.addEventListener("click", init_C)) {
         resetCookies()
@@ -138,7 +138,7 @@ function stopRandomize() {
 function render() {
   randomizer = setInterval(() => {
     start()
-  }, 3000)
+  }, 1000)
 }
 
 // event Listener
