@@ -3,11 +3,14 @@ console.log("Hello")
 // global variable
 
 // let board = []
-let winner
+let winner = false
 let timer = 60
+let timeStore = false
 let score = 0
 // let order = []
-let init1 = false
+let initTimeOut = false
+let renderC = 40
+let randomizer
 
 const cookie = document.createElement("img")
 cookie.src = "./image/cookie.png"
@@ -22,12 +25,16 @@ let boardRandom = ["", cookie, angryCookie]
 
 const init = document.querySelector("#startTheGame")
 
+const scoreClick = document.querySelector("#scoring")
+
 // functions
 function start() {
-  for (let i = 0; i < div_1.length; i++) {
-    div_1[i].innerHTML = ""
-    div_1[i].classList.remove("cookies")
-    div_1[i].classList.remove("angryCookies")
+  refresh()
+
+  if (winner === true) {
+    userWin()
+    scoreClick.innerHTML = score
+    winner = false
   }
 
   for (let i = 0; i < div_1.length; i++) {
@@ -45,22 +52,23 @@ function start() {
       div_1[i].classList.add("angryCookies")
     }
   }
-  time()
+
+  stopRandomize()
+  render()
 
   // console.log(board)
 }
 function scoreCookie(event) {
   const selectCookie = event.currentTarget // currentTarget used for event listener where target used for child elemnt ex: img , p , h
   if (selectCookie.classList.contains("cookies")) {
-    const scoreClick = document.querySelector("#scoring")
-    score += 10
+    score += 3
     scoreClick.innerHTML = score
     selectCookie.innerHTML = ""
     selectCookie.classList.remove("cookies")
     if (score >= 100) {
       userWin()
-      timer = 0
-      score = 0
+      winner = true
+      scoreClick.textContent = "100"
     }
   } else if (selectCookie.classList.contains("angryCookies")) {
     selectCookie.innerHTML = ""
@@ -72,16 +80,26 @@ function scoreCookie(event) {
 }
 
 function time() {
-  setInterval(() => {
+  timing = setInterval(() => {
     const changeTime = document.querySelector("#times")
     if (timer <= 0) {
       changeTime.innerHTML = "Time is Up"
-      return //Exit
+      stopGame()
+      //return //Exit
+      if (
+        initTimeOut === true &&
+        init.addEventListener("click", init_C) === true
+      ) {
+        reset()
+      }
     } else {
+      // start()
       changeTime.innerHTML = `${timer} Sec`
       timer--
+      console.log(timeStore)
     }
     console.log(timer)
+    // timeStore = true
   }, 1000)
 }
 
@@ -92,20 +110,54 @@ function userWin() {
     div_1[i].classList.remove("cookies")
     div_1[i].classList.remove("angryCookies")
   }
+  timer = 60
+  score = 0
 }
 
-// function refresh() {
-//   setInterval(() => {
-//     start()
-//   }, 3000)
-// }
+function refresh() {
+  for (let i = 0; i < div_1.length; i++) {
+    div_1[i].innerHTML = ""
+    div_1[i].classList.remove("cookies")
+    div_1[i].classList.remove("angryCookies")
+  }
+}
 
-// why it write over again not clear
 function init_C() {
   start()
+
+  time()
 }
 
+// function stopTime() {
+//   clearInterval(timing)
+// }
+function stopRandomize() {
+  clearInterval(randomizer)
+}
+
+function render() {
+  randomizer = setInterval(() => {
+    start()
+  }, 3000)
+}
+function stopGame() {
+  for (let i = 0; i < div_1.length; i++) {
+    div_1[i].innerHTML = ""
+    div_1[i].classList.remove("cookies")
+    div_1[i].classList.remove("angryCookies")
+  }
+  boardRandom = []
+  initTimeOut = true
+  console.log(initTimeOut)
+}
+function reset() {
+  boardRandom = ["", cookie, angryCookie]
+  console.log(boardRandom)
+}
 // event Listener
+// if (initTimeOut === true) {
+//   boardRandom = ["", cookie, angryCookie]
+// }
 for (let i = 0; i < div_1.length; i++) {
   div_1[i].addEventListener("click", scoreCookie)
 }
