@@ -63,8 +63,7 @@ function scoreCookie(event) {
     selectCookie.classList.remove("cookies")
     if (score >= 100) {
       // userWin()
-      winner = true
-
+      // winner = true
       scoreClick.textContent = "100"
       window.location.href = "./win.html"
     }
@@ -90,13 +89,11 @@ function time() {
         resetCookies()
       }
     } else {
-      // start()
       changeTime.innerHTML = `${timer} Sec`
       timer--
       console.log(timeStore)
     }
     console.log(timer)
-    // timeStore = true
   }, 1000)
 }
 
