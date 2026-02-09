@@ -4,59 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Can Click</title>
-    <script defer src="./script.js"></script>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="homePage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
-    <div class="nameGame">
-      <img src="./image/cookie.png" alt="cookie" class="cookieHead" />
-      <h1>Can Click level 1</h1>
-      <img src="./image/cookie.png" alt="cookie" class="cookieHead" />
+    <div>
+      <img src="./image/cookie.png" alt="" />
+      <h1 class="animate__bounceIn">Can Click</h1>
+      <img src="./image/angry-cookie.png" alt="" />
     </div>
-
-    <div class="bar">
-      <div id="times">60 Sec</div>
-      <button id="startTheGame">Start</button>
-      <div id="scoring">00</div>
-    </div>
-    <br />
-    <br />
-    <div class="all">
-      <div class="container">
-        <!-- <div class="row1"> -->
-        <div class="box" id="0"></div>
-        <div class="box" id="1"></div>
-        <div class="box" id="2"></div>
-        <div class="box" id="3"></div>
-        <div class="box" id="4"></div>
-        <div class="box" id="5"></div>
-        <!-- </div> -->
-
-        <!-- <div class="row2"> -->
-        <div class="box" id="6"></div>
-        <div class="box" id="7"></div>
-        <div class="box" id="8"></div>
-        <div class="box" id="9"></div>
-        <div class="box" id="10"></div>
-        <div class="box" id="11"></div>
-        <!-- </div> -->
-
-        <!-- <div class="row3"></div> -->
-        <div class="box" id="12"></div>
-        <div class="box" id="13"></div>
-        <div class="box" id="14"></div>
-        <div class="box" id="15"></div>
-        <div class="box" id="16"></div>
-        <div class="box" id="17"></div>
-
-        <!-- <div class="row4"></div> -->
-        <div class="box" id="18"></div>
-        <div class="box" id="19"></div>
-        <div class="box" id="20"></div>
-        <div class="box" id="21"></div>
-        <div class="box" id="22"></div>
-        <div class="box" id="23"></div>
-      </div>
+    <h2 class="animate__bounceInDown">Choose Level</h2>
+    <div class="click">
+      <a href="./level1.html"
+        ><button class="animate__bounceIn">level 1</button></a
+      >
+      <a href="./level2.html"><button>level 2</button></a>
+      <a href="./level3.html"><button>level 3</button></a>
     </div>
   </body>
 </html>

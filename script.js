@@ -65,7 +65,9 @@ function scoreCookie(event) {
       // userWin()
       // winner = true
       scoreClick.textContent = "100"
-      window.location.href = "./win.html"
+      setTimeout(() => {
+        window.location.href = "./win.html"
+      }, 1000)
     }
   } else if (selectCookie.classList.contains("angryCookies")) {
     selectCookie.innerHTML = ""
