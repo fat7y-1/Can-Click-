@@ -57,7 +57,7 @@ function start() {
 function scoreCookie(event) {
   const selectCookie = event.currentTarget // currentTarget used for event listener where target used for child elemnt ex: img , p , h
   if (selectCookie.classList.contains("cookies")) {
-    score += 1
+    score += 2
     scoreClick.innerHTML = score
     selectCookie.innerHTML = ""
     selectCookie.classList.remove("cookies")
