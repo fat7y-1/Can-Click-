@@ -57,7 +57,7 @@ function start() {
 function scoreCookie(event) {
   const selectCookie = event.currentTarget // currentTarget used for event listener where target used for child elemnt ex: img , p , h
   if (selectCookie.classList.contains("cookies")) {
-    score += 2
+    score += 30
     scoreClick.innerHTML = score
     selectCookie.innerHTML = ""
     selectCookie.classList.remove("cookies")
@@ -65,7 +65,9 @@ function scoreCookie(event) {
       // userWin()
       // winner = true
       scoreClick.textContent = "100"
-      window.location.href = "./win.html"
+      setTimeout(() => {
+        window.location.href = "./win.html"
+      }, 1000)
     }
   } else if (selectCookie.classList.contains("angryCookies")) {
     selectCookie.innerHTML = ""
