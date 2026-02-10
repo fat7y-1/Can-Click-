@@ -112,6 +112,8 @@ button {
 
 .animation {
   display: flex;
+
+  background-color: antiquewhite;
 }
 #scoreCountUp {
   height: 50px;
@@ -119,6 +121,7 @@ button {
   margin-left: 400px;
   color: greenyellow;
   font-size: 40px;
+  background-color: aliceblue;
 }
 
 @media (max-width: 600px) {

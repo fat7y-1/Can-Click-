@@ -76,7 +76,7 @@ function scoreCookie(event) {
       scoreClick.textContent = "100"
       setTimeout(() => {
         window.location.href = "./win.html"
-      }, 1000)
+      }, 500)
     }
   } else if (selectCookie.classList.contains("angryCookies")) {
     selectCookie.innerHTML = ""
@@ -136,7 +136,7 @@ function stopRandomize() {
 function render() {
   randomizer = setInterval(() => {
     start()
-  }, 1000)
+  }, 800)
 }
 
 // event Listener
