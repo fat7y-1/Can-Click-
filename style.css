@@ -106,12 +106,12 @@ img {
     font-size: 40px;
   }
   img {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
   }
   .container {
     height: 400px;
-    width: 900px;
+    width: 500px;
     background-color: aliceblue;
   }
   .box {
