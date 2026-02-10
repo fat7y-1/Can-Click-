@@ -96,6 +96,31 @@ img {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   height: 30px;
 }
+#timeCount {
+  height: 50px;
+  width: 250px;
+  margin-left: 500px;
+
+  color: red;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.animation {
+  display: flex;
+}
+#scoreCountUp {
+  height: 50px;
+  width: 250px;
+  margin-left: 400px;
+  color: greenyellow;
+  font-size: 40px;
+}
+
 @media (max-width: 600px) {
   #times {
     height: 40px;
@@ -112,7 +137,6 @@ img {
   .container {
     height: 400px;
     width: 500px;
-    background-color: aliceblue;
   }
 
   .cookieHead {

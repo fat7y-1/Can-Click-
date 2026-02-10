@@ -19,6 +19,12 @@ h2 {
   text-align: center;
   font-size: 60px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  margin-top: -50px;
+}
+#levels {
+  color: darkorange;
+  margin-top: 10px;
 }
 img {
   height: 400px;
@@ -34,7 +40,7 @@ img {
 }
 button {
   height: 150px;
-  width: 400px;
+  width: 450px;
   font-size: 40px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   border-radius: 20px;
@@ -45,6 +51,9 @@ button {
 button:hover {
   background-color: blue;
   color: white;
+}
+button {
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {

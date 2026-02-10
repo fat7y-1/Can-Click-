@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Can Click</title>
     <link rel="stylesheet" href="homePage.css" />
-    <script refer src="./hompage.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -13,36 +12,73 @@
   </head>
   <body>
     <div>
-      <img src="./image/cookie.png" alt="" class="test animate__animated" />
-      <h1 class="animate__animated animate__bounceIn">Cookies Clicker</h1>
+      <img
+        src="./image/cookie.png"
+        alt=""
+        class="test animate__animated animate__swing"
+      />
+      <h1 class="animate__animated animate__heartBeat">Cookies Clicker</h1>
       <img
         src="./image/angry-cookie.png"
         alt=""
         class="animate__animated animate__tada"
       />
     </div>
-    <h2 class="animate__animated animate__bounceInDown">Choose Level</h2>
+    <h2>the goal is catch the cookies</h2>
+    <h2>to get score 100 to Win</h2>
+    <h2 class="animate__animated animate__bounceInDown" id="levels">
+      Choose Level
+    </h2>
     <div class="click">
       <a href="./level1.html"
-        ><button class="animate__animated animate__bounceIn">level 1</button></a
+        ><button class="animate__animated animate__bounceIn level1">
+          level 1
+        </button></a
       >
       <a href="./level2.html"
-        ><button class="animate__animated">level 2</button></a
+        ><button class="animate__animated level2">level 2</button></a
       >
       <a href="./level3.html"
-        ><button class="animate__animated">level 3</button></a
+        ><button class="animate__animated level3">level 3</button></a
       >
     </div>
     <script>
-      let button = document.querySelector(".test")
+      let cookie = document.querySelector(".test")
 
-      button.addEventListener("mouseover", (event) => {
-        button.classList.add("animate__swing")
+      cookie.addEventListener("mouseover", (event) => {
+        cookie.classList.remove("animate__swing")
+        cookie.classList.add("animate__swing")
       })
-      button.addEventListener("mouseleave", (event) => {
-        button.classList.remove("animate__swing")
+      cookie.addEventListener("mouseleave", (event) => {
+        cookie.classList.remove("animate__swing")
       })
-      console.log(button)
+
+      let button1 = document.querySelector(".level1")
+
+      button1.addEventListener("mouseover", (event) => {
+        button1.classList.remove("animate__bounceIn")
+        button1.classList.add("animate__shakeX")
+      })
+      button1.addEventListener("mouseleave", (event) => {
+        button1.classList.remove("animate__shakeX")
+      })
+
+      let button2 = document.querySelector(".level2")
+
+      button2.addEventListener("mouseover", (event) => {
+        button2.classList.add("animate__shakeX")
+      })
+      button2.addEventListener("mouseleave", (event) => {
+        button2.classList.remove("animate__shakeX")
+      })
+      let button3 = document.querySelector(".level3")
+
+      button3.addEventListener("mouseover", (event) => {
+        button3.classList.add("animate__shakeX")
+      })
+      button3.addEventListener("mouseleave", (event) => {
+        button3.classList.remove("animate__shakeX")
+      })
     </script>
   </body>
 </html>
