@@ -13,8 +13,6 @@ h1 {
 }
 
 .all {
-  height: 900px;
-  width: auto;
   text-align: center;
   display: flex;
   /* make it center */
@@ -97,4 +95,31 @@ img {
   font-size: 40px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   height: 30px;
+}
+@media (max-width: 600px) {
+  #times {
+    height: 40px;
+    width: 280px;
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  .container {
+    height: 400px;
+    width: 900px;
+    background-color: aliceblue;
+  }
+  .box {
+    height: 70px;
+    width: 70px;
+  }
+  .cookieHead {
+    height: 100px;
+    width: 100px;
+  }
 }
