@@ -7,7 +7,6 @@ console.log("Hello")
 let timer = 60
 let score = 0
 
-let renderC = 40
 let randomizer
 let timing
 
@@ -33,6 +32,7 @@ let scoreCountUp = document.querySelector("#scoreCountUp")
 const scoreAnimate = document.querySelector(".up")
 
 // functions
+
 function start() {
   refresh()
 

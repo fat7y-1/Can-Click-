@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script defer src="./hompage.js"></script>
   </head>
   <body>
     <div>
@@ -42,43 +43,5 @@
         ><button class="animate__animated level3">level 3</button></a
       >
     </div>
-    <script>
-      let cookie = document.querySelector(".test")
-
-      cookie.addEventListener("mouseover", (event) => {
-        cookie.classList.remove("animate__swing")
-        cookie.classList.add("animate__swing")
-      })
-      cookie.addEventListener("mouseleave", (event) => {
-        cookie.classList.remove("animate__swing")
-      })
-
-      let button1 = document.querySelector(".level1")
-
-      button1.addEventListener("mouseover", (event) => {
-        button1.classList.remove("animate__bounceIn")
-        button1.classList.add("animate__shakeX")
-      })
-      button1.addEventListener("mouseleave", (event) => {
-        button1.classList.remove("animate__shakeX")
-      })
-
-      let button2 = document.querySelector(".level2")
-
-      button2.addEventListener("mouseover", (event) => {
-        button2.classList.add("animate__shakeX")
-      })
-      button2.addEventListener("mouseleave", (event) => {
-        button2.classList.remove("animate__shakeX")
-      })
-      let button3 = document.querySelector(".level3")
-
-      button3.addEventListener("mouseover", (event) => {
-        button3.classList.add("animate__shakeX")
-      })
-      button3.addEventListener("mouseleave", (event) => {
-        button3.classList.remove("animate__shakeX")
-      })
-    </script>
   </body>
 </html>
