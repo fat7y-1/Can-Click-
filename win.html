@@ -31,22 +31,21 @@
         </button></a
       >
     </div>
-    '
-    <audio
+
+    <!-- <audio controls autoplay
       class="winSound"
       src="./audio/floraphonic-brass-fail-8-a-207130.mp3"
       preload="auto"
     ></audio>
     <script>
-      const play = document.querySelector(".winSound")
+      const play1 = document.querySelector(".winSound")
 
       function playAudio() {
-        play.play()
+        // play1.addEventListener("load", play())
+        play1.play()
       }
 
-      document.addEventListener("load", () => {
-        playAudio()
-      })
-    </script>
+      playAudio()
+    </script> -->
   </body>
 </html>

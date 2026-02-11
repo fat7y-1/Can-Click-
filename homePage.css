@@ -77,4 +77,8 @@ button {
     height: 90px;
     width: 200px;
   }
+  h2 {
+    font-size: 40px;
+    margin-top: 0.02px;
+  }
 }
