@@ -70,7 +70,7 @@ function scoreCookie(event) {
     setTimeout(() => {
       scoreAnimate.classList.remove("animate__fadeOutUp")
       scoreCountUp.innerHTML = ""
-    }, 300)
+    }, 200)
 
     if (score === 100) {
       scoreClick.textContent = "100"
