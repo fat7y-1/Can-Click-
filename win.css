@@ -22,6 +22,9 @@ img {
   margin-right: 90px;
   /* background-color: aliceblue; */
 }
+audio{
+  display: none;
+}
 button {
   height: 150px;
   width: 400px;

@@ -6,8 +6,7 @@ console.log("Hello")
 
 let timer = 60
 let score = 0
-
-let renderC = 40
+let gameStart =false
 let randomizer
 let timing
 
@@ -61,7 +60,7 @@ function scoreCookie(event) {
   const selectCookie = event.currentTarget // currentTarget used for event listener where target used for child elemnt ex: img , p , h
   if (selectCookie.classList.contains("cookies")) {
     score += 2
-    scoreClick.innerHTML = score
+    scoreClick.innerHTML = `score: ${score}`
     selectCookie.innerHTML = ""
     selectCookie.classList.remove("cookies")
     scoreCountUp.innerHTML = "+2 Score"
@@ -104,9 +103,7 @@ function time() {
         window.location.href = "./loss.html"
       }, 1000)
 
-      if (initTimeOut === true && init.addEventListener("click", init_C)) {
-        resetCookies()
-      }
+      
     } else {
       changeTime.innerHTML = `${timer} Sec`
       timer--
@@ -125,8 +122,12 @@ function refresh() {
 }
 
 function init_C() {
+ if(gameStart ===true){
+    return
+  }
   start()
   time()
+  gameStart =true
 }
 
 function stopRandomize() {
