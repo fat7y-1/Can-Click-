@@ -99,7 +99,7 @@ img {
 #timeCount {
   height: 50px;
   width: 250px;
-  margin-left: 500px;
+  /* margin-left: 500px; */
 
   color: red;
   font-size: 40px;
@@ -110,15 +110,11 @@ button {
   cursor: pointer;
 }
 
-.animation {
-  display: flex;
 
-  /* background-color: antiquewhite; */
-}
 #scoreCountUp {
   height: 50px;
   width: 250px;
-  margin-left: 400px;
+  /* margin-left: 400px; */
   color: greenyellow;
   font-size: 40px;
   /* background-color: aliceblue; */
